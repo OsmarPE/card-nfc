@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  width: 90%;
+  max-width: 320px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 10px;
+  margin-inline: auto;
+  padding: 1.4em;
+}
+.card__picture {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.card__picture:hover .card__show {
+  opacity: 1;
+  transform: scale(1);
+}
+.card__image {
+  display: block;
+  width: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1;
+}
+.card__show {
+  position: absolute;
+  border-radius: 10px;
+  inset: 0;
+  background-color: hsla(178, 100%, 50%, 0.499);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.99);
+  transition: all 0.4s;
+}
+.card__heading {
+  padding: 1em 0 0;
+}
+.card__title {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.6em;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.card__text {
+  line-height: 1.5;
+  color: hsl(215, 51%, 70%);
+  margin-bottom: 1em;
+}
+.card__body {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+.card__dates {
+  display: flex;
+  gap: 0.5rem;
+}
+.card__info--diamond {
+  color: hsl(178, 100%, 50%);
+}
+.card__info--time {
+  color: hsl(215, 51%, 70%);
+}
+.card__footer {
+  padding-top: 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.card__perfil {
+  border-radius: 50%;
+  border: 1px solid hsl(215, 51%, 70%);
+}
+.card__person {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__description {
+  font-weight: 400;
+  color: hsl(215, 51%, 70%);
+  font-size: 1rem;
+}
+.card__description--white {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+}
+.card__title, .card__description--white {
+  transition: all 0.4s ease;
+}
+.card__title:hover, .card__description--white:hover {
+  color: hsl(178, 100%, 50%);
+}/*# sourceMappingURL=styles.css.map */
